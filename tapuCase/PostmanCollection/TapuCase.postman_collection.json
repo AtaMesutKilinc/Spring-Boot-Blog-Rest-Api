@@ -1,0 +1,667 @@
+{
+	"info": {
+		"_postman_id": "38d6839f-c2eb-444c-b8f5-170ca3e6fa68",
+		"name": "TapuCase",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17333548"
+	},
+	"item": [
+		{
+			"name": "author",
+			"item": [
+				{
+					"name": "authorSave",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"admin\",\r\n    \"surname\":\"admin\",\r\n    \"publisher\":\"companyname\",\r\n    \"email\":\"admin@mail.com\",\r\n    \"phone\":\"55464\",\r\n    \"password\":\"Ata.98\",\r\n    \"enabled\":true,\r\n    \"tokenExpired\":true,\r\n    \"role\":{\r\n        \"id\":1,\r\n        \"name\":\"author\"\r\n        \r\n    }\r\n  \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8099/author/save",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8099",
+							"path": [
+								"author",
+								"save"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "authorList",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8099/author/list",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8099",
+							"path": [
+								"author",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "authorDelete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8099/author/delete",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8099",
+							"path": [
+								"author",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "authorUpdate",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"id\": 3,\r\n        \"name\": \"admin\",\r\n        \"surname\": \"taaa\",\r\n        \"phone\": \"55464\",\r\n        \"publisher\": \"sdfaf\",\r\n        \"email\": \"admin@mail.com\",\r\n        \"password\": \"Ata.98\",\r\n        \"enabled\": true,\r\n        \"tokenExpired\": true,\r\n        \"role\": {\r\n            \"id\": 1,\r\n            \"name\": \"author\"\r\n        }\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8099/author/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8099",
+							"path": [
+								"author",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "changePasswordAuthor",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhdXRob3IxQG1haWwuY29tIiwiZXhwIjoxNjYwNjc4MTM3LCJpYXQiOjE2NjA2NjAxMzd9.ar9x90IpSdNlXqpN91b1vJIbguDnC2m21RqAxmxnHro",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "oldPwd",
+									"value": "Ata.97",
+									"type": "text"
+								},
+								{
+									"key": "newPwd",
+									"value": "Ata.98",
+									"type": "text"
+								},
+								{
+									"key": "newPwdConf",
+									"value": "Ata.98",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8099/author/changePasswordAuthor",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8099",
+							"path": [
+								"author",
+								"changePasswordAuthor"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "reader",
+			"item": [
+				{
+					"name": "readerSave",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"admin\",\r\n    \"surname\":\"admin\",\r\n    \"publisher\":\"companyname\",\r\n    \"email\":\"admin@mail.com\",\r\n    \"phone\":\"55464\",\r\n    \"password\":\"Ata.98\",\r\n    \"enabled\":true,\r\n    \"tokenExpired\":true,\r\n    \"role\":{\r\n        \"id\":2,\r\n        \"name\":\"reader\"\r\n        \r\n    }\r\n  \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8099/reader/save",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8099",
+							"path": [
+								"reader",
+								"save"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "readerList",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8099/reader/list",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8099",
+							"path": [
+								"reader",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "readerDelete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "3",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8099/reader/delete",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8099",
+							"path": [
+								"reader",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "readerUpdate",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"id\": 3,\r\n        \"name\": \"ataa\",\r\n        \"surname\": \"admin\",\r\n        \"phone\": \"4324323\",\r\n        \"email\": \"admin@mail.com\",\r\n        \"password\": \"Ata.98\",\r\n        \"enabled\": true,\r\n        \"tokenExpired\": true,\r\n        \"role\": {\r\n            \"id\": 2,\r\n            \"name\": \"reader\"\r\n        },\r\n        \"resetPasswordToken\": null\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8099/reader/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8099",
+							"path": [
+								"reader",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "changePasswordReader",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyZWFkZXJAbWFpbC5jb20iLCJleHAiOjE2NjA2NzgyMjAsImlhdCI6MTY2MDY2MDIyMH0.cDAgqcx7iYVG2dREcIFUlTS0943-pEWSbnzwsPDqQ_A",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "oldPwd",
+									"value": "Custom.011",
+									"type": "text"
+								},
+								{
+									"key": "newPwd",
+									"value": "Custom.01",
+									"type": "text"
+								},
+								{
+									"key": "newPwdConf",
+									"value": "Custom.01",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8099/reader/changePasswordReader",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8099",
+							"path": [
+								"reader",
+								"changePasswordReader"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "writing",
+			"item": [
+				{
+					"name": "writingSave",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"23213\",\r\n    \"text\":\"21321\",\r\n    \"author\":{\r\n        \"id\":4\r\n        \r\n    }\r\n  \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8099/writing/save",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8099",
+							"path": [
+								"writing",
+								"save"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "writingList",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyZWFkZXJAbWFpbC5jb20iLCJleHAiOjE2NjA2Nzc1MDAsImlhdCI6MTY2MDY1OTUwMH0.DmrIc1dgh8jdXQPgTNE7gyyR3eMilyDnudQ4yPWzo6E",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8099/writing/list",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8099",
+							"path": [
+								"writing",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "writingList mylist",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhdXRob3IxQG1haWwuY29tIiwiZXhwIjoxNjYwNjc3OTMwLCJpYXQiOjE2NjA2NTk5MzB9.CfLuT5SDRJFmqv238BRUwge6bywVqD10-wCRuwxqjw8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8099/writing/myList",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8099",
+							"path": [
+								"writing",
+								"myList"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "writingList search",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyZWFkZXJAbWFpbC5jb20iLCJleHAiOjE2NjA2Nzc1MDAsImlhdCI6MTY2MDY1OTUwMH0.DmrIc1dgh8jdXQPgTNE7gyyR3eMilyDnudQ4yPWzo6E",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "q",
+									"value": "y",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8099/writing/search",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8099",
+							"path": [
+								"writing",
+								"search"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "writingDelete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8099/writing/delete",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8099",
+							"path": [
+								"writing",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "writingUpdate",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhdXRob3IxQG1haWwuY29tIiwiZXhwIjoxNjYwNjc3OTMwLCJpYXQiOjE2NjA2NTk5MzB9.CfLuT5SDRJFmqv238BRUwge6bywVqD10-wCRuwxqjw8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n        \"id\": 7,\r\n        \"title\": \"asaa\",\r\n        \"text\": \"bir sadsa\"\r\n        \r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8099/writing/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8099",
+							"path": [
+								"writing",
+								"update"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "loginAuthor",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"username\":\"author1@mail.com\",\r\n    \"password\":\"Ata.97\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8099/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8099",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "loginReader",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"reader@mail.com\",\r\n    \"password\":\"Custom.01\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8099/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8099",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "registerAuthor",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"author2\",\r\n    \"surname\":\"author2\",\r\n    \"publisher\":\"companyname\",\r\n    \"email\":\"author2@mail.com\",\r\n    \"password\":\"Ata.98\"\r\n    \r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8099/registerAuthor",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8099",
+					"path": [
+						"registerAuthor"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "registerReader",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"reader\",\r\n    \"surname\":\"reader\",\r\n    \"phone\":\"05319714531\",\r\n    \"email\":\"reader@mail.com\",\r\n    \"password\":\"Custom.01\"\r\n  \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8099/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8099",
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
