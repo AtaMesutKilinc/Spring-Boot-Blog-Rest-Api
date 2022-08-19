@@ -24,6 +24,7 @@ public class AuthorService {
     final CacheManager cacheManager;
     final Configs configs;
     final HttpSession httpSession;
+
     public AuthorService(AuthorRepository authorRepository, CacheManager cacheManager, Configs configs, HttpSession httpSession) {
         this.authorRepository = authorRepository;
         this.cacheManager = cacheManager;
