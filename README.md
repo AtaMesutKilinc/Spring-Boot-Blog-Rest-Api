@@ -7,6 +7,7 @@ This project was written for a case. Detailed information with Case is [here](ht
 The reader can only view all the articles, search within the articles (Title, Text) and change password page. 
 After the author has logged in Author can edit, add ,delete their own writings controls were made and change password page.
 
+The postman collection is [here](https://github.com/AtaMesutKilinc/Spring-Boot-Blog-Rest-Api/tree/main/tapuCase/PostmanCollection)
 
 
 | Used technologies  |  |
