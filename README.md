@@ -16,6 +16,7 @@ After the author has logged in Author can edit, add ,delete their own writings c
 | Session  | Spring Data Jpa|
 | Validation  | Intellij IDE|
 
+<img src="https://github.com/AtaMesutKilinc/Spring-Boot-Blog-Rest-Api/blob/main/tapuCase/Image/DB.JPG" >
 
 
 
