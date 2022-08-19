@@ -1,6 +1,6 @@
 # Spring-Boot-Blog-Rest-Api (JWT) 
 
-This project was written for a case. Detailed information with Case is [here](https://github.com/AtaMesutKilinc/Spring-Boot-Blog-Rest-Api/blob/main/tapuCase/PostmanCollection/case.JPG).
+This project was written for a case. Detailed information with Case is [here](https://github.com/AtaMesutKilinc/Spring-Boot-Blog-Rest-Api/blob/main/tapuCase/Image/case.JPG).
 
 
 - The project is a blog site with authors and readers. Author and reader register pages are different, but there is only one login.
